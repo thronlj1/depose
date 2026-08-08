@@ -1,0 +1,12 @@
+services:
+  intent-router:
+    build:
+      context: .
+      args:
+        TORCH_INDEX_URL: ${TORCH_INDEX_URL:-https://download.pytorch.org/whl/cpu}
+    image: nma-query-intent-router:v1.16.0
+    environment:
+      INTENT_DEVICE: ${INTENT_DEVICE:-auto}
+    ports:
+      - "${INTENT_PORT:-8000}:8000"
+    restart: unless-stopped

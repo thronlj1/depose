@@ -1,0 +1,5 @@
+.DS_Store
+.git
+*.tar
+*.tar.gz
+SHA256SUMS

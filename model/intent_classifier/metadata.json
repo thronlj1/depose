@@ -1,0 +1,37 @@
+{
+  "package_name": "nma-query-router",
+  "version": "v1.16.0",
+  "project_id": "prj_60e41d296e16",
+  "model_id": "mdl_7fac9d9804e1",
+  "training_run_id": "run_3910dd5cfb39",
+  "dataset_id": "data_47b21b615c25",
+  "stage": "head_only",
+  "task_type": "single_label",
+  "base_model": "intfloat/multilingual-e5-base",
+  "base_model_revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+  "head_type": "mlp",
+  "embedding_dim": 768,
+  "hidden_dim": 256,
+  "dropout": 0.2,
+  "epochs": 12,
+  "batch_size": 32,
+  "embedding_batch_size": 64,
+  "head_learning_rate": 0.001,
+  "encoder_learning_rate": 0.000002,
+  "weight_decay": 0.01,
+  "max_length": 128,
+  "threshold": 0.0,
+  "seed": 45,
+  "labels": [
+    "data_analytics",
+    "data_multi",
+    "data_single",
+    "knowledge_process"
+  ],
+  "evaluation": {
+    "protocol": "strict_fixed_test_v3",
+    "test_samples": 120,
+    "macro_f1": 0.8962948815889993,
+    "accuracy": 0.9
+  }
+}

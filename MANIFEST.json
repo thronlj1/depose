@@ -1,0 +1,22 @@
+{
+  "package": "nma-query-intent-router",
+  "version": "v1.16.0",
+  "created_at": "2026-08-04T11:11:00+04:00",
+  "project_id": "prj_60e41d296e16",
+  "model_id": "mdl_7fac9d9804e1",
+  "training_run_id": "run_3910dd5cfb39",
+  "dataset_id": "data_47b21b615c25",
+  "runtime": "FastAPI + PyTorch + Transformers",
+  "base_model": "intfloat/multilingual-e5-base",
+  "base_model_revision": "d128750597153bb5987e10b1c3493a34e5a4502a",
+  "weights_included": true,
+  "offline_runtime": true,
+  "model_stage": "head_only",
+  "labels": 4,
+  "strict_test": {
+    "version": "v3",
+    "samples": 120,
+    "macro_f1": 0.8962948815889993,
+    "accuracy": 0.9
+  }
+}
