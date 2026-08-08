@@ -8,13 +8,21 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     HF_HUB_OFFLINE=1 \
     TRANSFORMERS_OFFLINE=1 \
     MODEL_DIR=/model/intent_classifier \
-    INTENT_DEVICE=auto
+    INTENT_DEVICE=auto \
+    CLAW_LLM_MODEL=gpt-5.6-sol \
+    OPENAI_WIRE_API=responses \
+    OPENAI_TIMEOUT_SECONDS=60 \
+    OPENAI_MAX_RETRIES=2 \
+    LLM_EVAL_CONCURRENCY=1
 
 COPY requirements.txt ./
 RUN pip install --no-cache-dir torch==2.7.0 --index-url ${TORCH_INDEX_URL} \
     && pip install --no-cache-dir -r requirements.txt
 
 COPY runtime/app.py ./app.py
+COPY runtime/llm_config.py ./llm_config.py
+COPY runtime/submission_router.py ./submission_router.py
+COPY runtime/skills ./skills
 COPY model /model
 
 RUN useradd --create-home --uid 10001 appuser \

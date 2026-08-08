@@ -9,9 +9,31 @@ from pydantic import BaseModel, Field
 from torch import nn
 from transformers import AutoModel, AutoTokenizer
 
+try:
+    from .llm_config import build_openai_client, load_llm_config
+    from .submission_router import (
+        SubmissionDetectionError,
+        SubmissionDetector,
+        UnifiedIntentRouter,
+    )
+except ImportError:
+    from llm_config import build_openai_client, load_llm_config
+    from submission_router import (
+        SubmissionDetectionError,
+        SubmissionDetector,
+        UnifiedIntentRouter,
+    )
+
 
 MODEL_DIR = Path(os.getenv("MODEL_DIR", "/model/intent_classifier"))
 DEVICE_SETTING = os.getenv("INTENT_DEVICE", "auto").lower()
+LLM_CONFIG = load_llm_config()
+SUBMISSION_SKILL_PATH = Path(
+    os.getenv(
+        "SUBMISSION_SKILL_PATH",
+        str(Path(__file__).resolve().parent / "skills" / "detect-service-submission.md"),
+    )
+)
 
 
 def mean_pool(hidden_state: torch.Tensor, attention_mask: torch.Tensor) -> torch.Tensor:
@@ -103,7 +125,22 @@ class PredictRequest(BaseModel):
 
 
 runtime = IntentRuntime(MODEL_DIR)
-app = FastAPI(title="NMA Query Intent Router", version=runtime.metadata["version"])
+
+
+def build_unified_router():
+    if not LLM_CONFIG.api_key:
+        return None
+    client = build_openai_client(LLM_CONFIG)
+    detector = SubmissionDetector.from_skill(
+        client=client,
+        model=LLM_CONFIG.model,
+        skill_path=SUBMISSION_SKILL_PATH,
+    )
+    return UnifiedIntentRouter(detector=detector, local_predictor=runtime.predict)
+
+
+unified_router = build_unified_router()
+app = FastAPI(title="NMA Unified Intent Router", version=runtime.metadata["version"])
 
 
 @app.get("/health")
@@ -113,12 +150,20 @@ def health() -> dict:
         "model_version": runtime.metadata["version"],
         "model_stage": runtime.metadata["stage"],
         "device": str(runtime.device),
+        "llm_submission_detector": {
+            "configured": unified_router is not None,
+            "model": LLM_CONFIG.model,
+            "wire_api": LLM_CONFIG.wire_api,
+            "base_url_configured": LLM_CONFIG.base_url is not None,
+            "timeout_seconds": LLM_CONFIG.timeout_seconds,
+            "max_retries": LLM_CONFIG.max_retries,
+        },
     }
 
 
 @app.get("/metadata")
 def metadata() -> dict:
-    return {
+    result = {
         key: runtime.metadata[key]
         for key in (
             "package_name",
@@ -131,6 +176,10 @@ def metadata() -> dict:
             "evaluation",
         )
     }
+    result["public_labels"] = [*runtime.metadata["labels"], "service_submission"]
+    result["route_endpoint"] = "/route"
+    result["submission_model"] = LLM_CONFIG.model
+    return result
 
 
 @app.post("/predict")
@@ -139,3 +188,22 @@ def predict(request: PredictRequest) -> dict:
     if not text:
         raise HTTPException(status_code=422, detail="text must not be blank")
     return runtime.predict(text)
+
+
+@app.post("/route")
+def route(request: PredictRequest) -> dict:
+    text = request.text.strip()
+    if not text:
+        raise HTTPException(status_code=422, detail="text must not be blank")
+    if unified_router is None:
+        raise HTTPException(
+            status_code=503,
+            detail="OPENAI_API_KEY is not configured for the five-intent router",
+        )
+    try:
+        return unified_router.route(text)
+    except SubmissionDetectionError as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"submission detection failed: {exc}",
+        ) from exc

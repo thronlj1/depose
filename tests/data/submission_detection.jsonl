@@ -1,0 +1,72 @@
+{"id":"en-sub-001","text":"I want to apply for service 203 now.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-002","text":"Please upload this PDF and start my Publication Printing Permit application.","label":"service_submission","language":"en","category":"attachment_submission"}
+{"id":"en-sub-003","text":"Start an application to circulate my published book within the country.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-004","text":"Continue my saved service 204 application and submit the remaining details.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-005","text":"Help me fill in the printing permit form in the chat.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-006","text":"I have the ISBN and want you to submit the circulation permit for me.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-007","text":"Begin the permit application for printing my new book.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-008","text":"Attach this purchase invoice and lodge the publication circulation request.","label":"service_submission","language":"en","category":"attachment_submission"}
+{"id":"en-sub-009","text":"Proceed with service 203 using the document I uploaded.","label":"service_submission","language":"en","category":"attachment_submission"}
+{"id":"en-sub-010","text":"Open a new application for a local media printing permit.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-011","text":"Let's apply for permission to distribute this electronic publication in the country.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-sub-012","text":"Tell me the required steps and then start the 203 application now.","label":"service_submission","language":"en","category":"explicit_submission"}
+{"id":"en-non-001","text":"What documents are required for service 203?","label":"non_submission","language":"en","category":"requirements"}
+{"id":"en-non-002","text":"Check the status of my existing 203 application.","label":"non_submission","language":"en","category":"status_query"}
+{"id":"en-non-003","text":"How many service 204 requests were submitted this month?","label":"non_submission","language":"en","category":"analytics"}
+{"id":"en-non-004","text":"If I wanted to print a book next year, which permit would I need?","label":"non_submission","language":"en","category":"hypothetical"}
+{"id":"en-non-005","text":"Am I eligible for the Publication Printing Permit?","label":"non_submission","language":"en","category":"eligibility"}
+{"id":"en-non-006","text":"How much does service 203 cost?","label":"non_submission","language":"en","category":"fees"}
+{"id":"en-non-007","text":"How long does a publication circulation permit take?","label":"non_submission","language":"en","category":"duration"}
+{"id":"en-non-008","text":"What is the difference between services 203 and 204?","label":"non_submission","language":"en","category":"requirements"}
+{"id":"en-non-009","text":"Show me the details of application A-204-778.","label":"non_submission","language":"en","category":"status_query"}
+{"id":"en-non-010","text":"Compare the approval rates of printing and circulation permits.","label":"non_submission","language":"en","category":"analytics"}
+{"id":"en-non-011","text":"Which fields appear on the service 204 form?","label":"non_submission","language":"en","category":"requirements"}
+{"id":"en-non-012","text":"I am thinking about publishing a book but have not decided whether to apply.","label":"non_submission","language":"en","category":"hypothetical"}
+{"id":"zh-sub-001","text":"我现在要申请203服务。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-002","text":"请把我上传的PDF用于印刷许可申请并开始提交。","label":"service_submission","language":"zh","category":"attachment_submission"}
+{"id":"zh-sub-003","text":"帮我发起出版物境内流通许可。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-004","text":"继续填写我保存的204申请，然后提交剩余资料。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-005","text":"我想直接在聊天里填写印刷许可表单。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-006","text":"ISBN已经有了，请帮我提交出版物流通申请。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-007","text":"现在开始办理新书的印刷许可证。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-008","text":"请附上这张采购发票并发起204服务。","label":"service_submission","language":"zh","category":"attachment_submission"}
+{"id":"zh-sub-009","text":"使用我刚上传的文件继续办理203。","label":"service_submission","language":"zh","category":"attachment_submission"}
+{"id":"zh-sub-010","text":"为本地媒体材料新建一个印刷许可申请。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-011","text":"我要申请允许这本电子出版物在境内流通。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-sub-012","text":"先告诉我步骤，然后立即帮我发起203申请。","label":"service_submission","language":"zh","category":"explicit_submission"}
+{"id":"zh-non-001","text":"203需要准备哪些材料？","label":"non_submission","language":"zh","category":"requirements"}
+{"id":"zh-non-002","text":"查询我现有203申请的状态。","label":"non_submission","language":"zh","category":"status_query"}
+{"id":"zh-non-003","text":"统计本月提交了多少个204申请。","label":"non_submission","language":"zh","category":"analytics"}
+{"id":"zh-non-004","text":"如果明年要印一本书，我可能需要哪种许可？","label":"non_submission","language":"zh","category":"hypothetical"}
+{"id":"zh-non-005","text":"我符合出版印刷许可的申请资格吗？","label":"non_submission","language":"zh","category":"eligibility"}
+{"id":"zh-non-006","text":"203服务收费多少？","label":"non_submission","language":"zh","category":"fees"}
+{"id":"zh-non-007","text":"出版物流通许可通常需要多长时间？","label":"non_submission","language":"zh","category":"duration"}
+{"id":"zh-non-008","text":"203和204服务有什么区别？","label":"non_submission","language":"zh","category":"requirements"}
+{"id":"zh-non-009","text":"查看申请A-204-778的详细信息。","label":"non_submission","language":"zh","category":"status_query"}
+{"id":"zh-non-010","text":"比较印刷许可和流通许可的通过率。","label":"non_submission","language":"zh","category":"analytics"}
+{"id":"zh-non-011","text":"204表单里有哪些字段？","label":"non_submission","language":"zh","category":"requirements"}
+{"id":"zh-non-012","text":"我在考虑出版一本书，但还没有决定是否申请。","label":"non_submission","language":"zh","category":"hypothetical"}
+{"id":"ar-sub-001","text":"أريد التقديم على الخدمة 203 الآن.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-002","text":"يرجى رفع ملف PDF هذا وبدء طلب تصريح طباعة المطبوعات.","label":"service_submission","language":"ar","category":"attachment_submission"}
+{"id":"ar-sub-003","text":"ابدأ طلب تصريح لتداول كتابي المنشور داخل الدولة.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-004","text":"تابع طلب الخدمة 204 المحفوظ وأرسل البيانات المتبقية.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-005","text":"ساعدني في تعبئة نموذج تصريح الطباعة داخل المحادثة.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-006","text":"لدي رقم ISBN وأريد منك تقديم طلب تصريح التداول.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-007","text":"ابدأ الآن إجراءات تصريح طباعة كتابي الجديد.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-008","text":"أرفق فاتورة الشراء هذه وقدم طلب تداول المنشور.","label":"service_submission","language":"ar","category":"attachment_submission"}
+{"id":"ar-sub-009","text":"استخدم المستند الذي رفعته لمتابعة الخدمة 203.","label":"service_submission","language":"ar","category":"attachment_submission"}
+{"id":"ar-sub-010","text":"افتح طلباً جديداً لتصريح طباعة مواد إعلامية محلية.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-011","text":"أريد التقديم للسماح بتداول هذا المنشور الإلكتروني داخل الدولة.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-sub-012","text":"اشرح الخطوات ثم ابدأ طلب 203 فوراً.","label":"service_submission","language":"ar","category":"explicit_submission"}
+{"id":"ar-non-001","text":"ما هي المستندات المطلوبة للخدمة 203؟","label":"non_submission","language":"ar","category":"requirements"}
+{"id":"ar-non-002","text":"تحقق من حالة طلبي الحالي للخدمة 203.","label":"non_submission","language":"ar","category":"status_query"}
+{"id":"ar-non-003","text":"كم عدد طلبات الخدمة 204 المقدمة هذا الشهر؟","label":"non_submission","language":"ar","category":"analytics"}
+{"id":"ar-non-004","text":"إذا أردت طباعة كتاب العام القادم، فما التصريح الذي سأحتاجه؟","label":"non_submission","language":"ar","category":"hypothetical"}
+{"id":"ar-non-005","text":"هل أنا مؤهل للحصول على تصريح طباعة المطبوعات؟","label":"non_submission","language":"ar","category":"eligibility"}
+{"id":"ar-non-006","text":"كم تبلغ رسوم الخدمة 203؟","label":"non_submission","language":"ar","category":"fees"}
+{"id":"ar-non-007","text":"كم تستغرق معاملة تصريح تداول المطبوعات؟","label":"non_submission","language":"ar","category":"duration"}
+{"id":"ar-non-008","text":"ما الفرق بين الخدمتين 203 و204؟","label":"non_submission","language":"ar","category":"requirements"}
+{"id":"ar-non-009","text":"اعرض تفاصيل الطلب A-204-778.","label":"non_submission","language":"ar","category":"status_query"}
+{"id":"ar-non-010","text":"قارن نسب الموافقة على تصاريح الطباعة والتداول.","label":"non_submission","language":"ar","category":"analytics"}
+{"id":"ar-non-011","text":"ما الحقول الموجودة في نموذج الخدمة 204؟","label":"non_submission","language":"ar","category":"requirements"}
+{"id":"ar-non-012","text":"أفكر في نشر كتاب لكنني لم أقرر بعد ما إذا كنت سأتقدم بطلب.","label":"non_submission","language":"ar","category":"hypothetical"}

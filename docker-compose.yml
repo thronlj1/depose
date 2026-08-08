@@ -7,6 +7,13 @@ services:
     image: nma-query-intent-router:v1.16.0
     environment:
       INTENT_DEVICE: ${INTENT_DEVICE:-auto}
+      OPENAI_BASE_URL: ${OPENAI_BASE_URL:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
+      CLAW_LLM_MODEL: ${CLAW_LLM_MODEL:-gpt-5.6-sol}
+      OPENAI_WIRE_API: ${OPENAI_WIRE_API:-responses}
+      OPENAI_TIMEOUT_SECONDS: ${OPENAI_TIMEOUT_SECONDS:-60}
+      OPENAI_MAX_RETRIES: ${OPENAI_MAX_RETRIES:-2}
+      LLM_EVAL_CONCURRENCY: ${LLM_EVAL_CONCURRENCY:-1}
     ports:
       - "${INTENT_PORT:-8000}:8000"
     restart: unless-stopped

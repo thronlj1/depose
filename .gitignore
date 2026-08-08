@@ -1,2 +1,5 @@
 .DS_Store
+.env
 model/intent_classifier/encoder/model.safetensors
+__pycache__/
+*.pyc
